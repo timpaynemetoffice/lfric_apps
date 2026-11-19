@@ -10,6 +10,7 @@
 
 module adj_semi_implicit_solver_alg_mod
 
+  use adjoint_config_mod,                     only: mixed_solver_a_tol_ext_adj   
   use config_mod,                             only: config_type
   use constants_mod,                          only: i_def, r_def, l_def, r_solver
   use log_mod,                                only: log_event, LOG_LEVEL_INFO, LOG_LEVEL_ERROR
@@ -278,7 +279,7 @@ contains
                                             adj_mixed_preconditioner_in,   &
                                             mixed_gcrk,                    &
                                             si_tolerance,                  &
-                                            mixed_solver_a_tol,            &
+                                            mixed_solver_a_tol_ext_adj,    &
                                             si_maximum_iterations,         &
                                             si_monitor_convergence,        &
                                             si_fail_on_non_converged ) )

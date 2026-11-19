@@ -29,6 +29,7 @@ module semi_implicit_solver_alg_mod
   ! Config
   use mixed_solver_config_mod,            only: split_w,                  &
                                                 mixed_solver_a_tol,       &
+                                                mixed_solver_a_tol_ext,   &
                                                 eliminate_variables,      &
                                                 eliminate_variables_analytic
 
@@ -427,7 +428,7 @@ contains
                                          mixed_preconditioner_in, &
                                          mixed_gcrk,              &
                                          si_tolerance,            &
-                                         mixed_solver_a_tol,      &
+                                         mixed_solver_a_tol_ext,  &
                                          si_maximum_iterations,   &
                                          si_monitor_convergence,  &
                                          si_fail_on_non_converged ) )
